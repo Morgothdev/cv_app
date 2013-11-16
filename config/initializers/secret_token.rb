@@ -9,4 +9,23 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-CvApp::Application.config.secret_key_base = '94f1870d0c4a303975d00fe208129b85be4380341aee54b7e7dc8c4cb486f43095eaa8cdfba5de1cd6f1da3af66ca77adfae3d6282646c3e6c7ee114c93a6163'
+
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+
+
+
+CvApp::Application.config.secret_key_base = secure_token
