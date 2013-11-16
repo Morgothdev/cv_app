@@ -9,6 +9,17 @@ group :development, :test do
     # Use sqlite3 as the database for Active Record
     gem 'sqlite3', '1.3.8'
     gem 'rspec-rails', '2.13.1'
+
+    #dla guarda
+    gem 'guard-rspec', '2.5.0'
+    
+    # okienka notyfikujące w linuxie dla guarda
+    gem 'libnotify', '0.8.0'
+
+    # serwer testów spork + 
+    gem 'spork-rails', '4.0.0'
+    gem 'guard-spork', '1.5.0'
+    gem 'childprocess', '0.3.6'
 end
 
 group :test do
