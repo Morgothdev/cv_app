@@ -7,10 +7,11 @@
     <div class="masthead">
     <ul class="nav nav-justified">
         <li <%= class_for_active(yield(:active_for_header),"home") %>><%= link_to "Home", root_path %></li>
-        <li <%= class_for_active(yield(:active_for_header),"experience") %>><%= link_to "Experience", "#" %></li>
-        <li <%= class_for_active(yield(:active_for_header),"portfolio") %>><%= link_to "Potfolio", "#" %></li>
-        <li <%= class_for_active(yield(:active_for_header),"aboutme") %>><%= link_to "About Me", "#" %></li>
-        <li <%= class_for_active(yield(:active_for_header),"contact") %>><%= link_to "Contact", '#' %></li>
+        <li <%= class_for_active(yield(:active_for_header),"experience") %>><%= link_to "Experience", experience_path %></li>
+        <li <%= class_for_active(yield(:active_for_header),"portfolio") %>><%= link_to "Potfolio", portfolio_path %></li>
+        <li <%= class_for_active(yield(:active_for_header),"education") %>><%= link_to "Education", education_path %></li>
+        <li <%= class_for_active(yield(:active_for_header),"aboutme") %>><%= link_to "About Me", about_path %></li>
+        <li <%= class_for_active(yield(:active_for_header),"contact") %>><%= link_to "Contact", contact_path %></li>
     </ul>
   </div>
 </div>

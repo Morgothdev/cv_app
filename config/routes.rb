@@ -1,5 +1,15 @@
 CvApp::Application.routes.draw do
+
+  get "contact/index"
   root "home_page#index"
+
+  match '/about', to: 'about#index', via: 'get'
+  match '/portfolio', to: 'portfolio#index', via: 'get'
+  match '/education', to: 'education#index', via: 'get'
+  match '/experience', to: 'experience#index', via: 'get'
+  match '/contact', to: 'contact#index', via: 'get'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
