@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Function do
 
 	before do
-		@elem = PortfolioElem.create(project_name: "konfa", whens: "last sumer", description: "konferencja")
+		@elem = Portfolio.create(project_name: "konfa", whens: "last sumer", description: "konferencja")
 		@elem.save
 		@function = @elem.functions.build(description: "napisanie serwera")
 		@function.save
@@ -13,15 +13,15 @@ describe Function do
 
 
 	it { should respond_to(:description) }
-	it { should respond_to(:portfolio_elem_id) }
-	it { should respond_to(:portfolio_elem)}
+	it { should respond_to(:portfolio_id) }
+	it { should respond_to(:portfolio)}
 
 	it { should be_valid }
 
-	its(:portfolio_elem) { should eq @elem }
+	its(:portfolio) { should eq @elem }
 
-	describe "when portfolio_elem_id not exists" do
-		before {@function.portfolio_elem_id = nil }
+	describe "when portfolio_id not exists" do
+		before {@function.portfolio_id = nil }
 		it { should_not be_valid }
 	end
 end

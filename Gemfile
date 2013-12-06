@@ -21,6 +21,9 @@ group :development, :test do
     gem 'guard-spork', '1.5.0'
     gem 'childprocess', '0.3.6'
 
+    #do zapychania bazy danych przykladowymi danymi
+    gem 'faker', '1.1.2'
+
     # do generowania mockow
     gem 'factory_girl_rails', '4.2.1'
 end

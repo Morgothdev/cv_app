@@ -1,12 +1,14 @@
 CvApp::Application.routes.draw do
 
-  get "contact/index"
+  resources :portfolios, :experiences, :educations
+  
+
   root "home_page#index"
 
   match '/about', to: 'about#index', via: 'get'
-  match '/portfolio', to: 'portfolio#index', via: 'get'
-  match '/education', to: 'education#index', via: 'get'
-  match '/experience', to: 'experience#index', via: 'get'
+  match '/portfolio', to: 'portfolios#index', via: 'get'
+  match '/education', to: 'educations#index', via: 'get'
+  match '/experience', to: 'experiences#index', via: 'get'
   match '/contact', to: 'contact#index', via: 'get'
   match '/adminlog', to: 'sessions#index', via: 'get'
 
