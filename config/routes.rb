@@ -8,7 +8,7 @@ CvApp::Application.routes.draw do
   match '/education', to: 'education#index', via: 'get'
   match '/experience', to: 'experience#index', via: 'get'
   match '/contact', to: 'contact#index', via: 'get'
-
+  match '/adminlog', to: 'sessions#index', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

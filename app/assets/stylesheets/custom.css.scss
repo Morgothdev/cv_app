@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 /* footer */
 
 footer {
@@ -27,12 +29,4 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 10px;
-}
-
-rootVisible href {
-  float: right;
-  color: #00F;
-  &:hover{
-    color: #F00;
-  }
 }

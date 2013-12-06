@@ -1,9 +1,10 @@
 class PortfolioElem < ActiveRecord::Base
-	attr_accessor :project_name, :whens, :description, :my_functions
-	
+
 	validates :project_name, presence: true, length: { maximum: 50 }
-	validates :whens, presence: true
-	validates :description, presence: true
-	validates :my_functions, presence: true
+	validates :whens, presence: true, length: { maximum: 40 }
+	validates :description, presence: true, length: { maximum: 2000 }
+	
+	has_many :functions, dependent: :destroy
 	
 end
+	
