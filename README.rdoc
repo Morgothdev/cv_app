@@ -13,4 +13,4 @@ Powstaje z użyciem:
       -> narzędzia do testowania oraz automatyzacji testów
   bootstrap -> CSS
   postgresql
-  uruchamiana na heroku (tam prowadzi alias z www.morgoth.com.pl )  
+  deplooy do heroku (tam prowadzi alias z www.morgoth.com.pl )  
