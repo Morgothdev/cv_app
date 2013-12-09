@@ -7,9 +7,7 @@ namespace :db do
       name = "project-#{nam}"
       dsc = Faker::Lorem.sentence(10)
       whe = "#{n+1}"
-      Portfolio.create!(project_name: name,
-                   description: dsc,
-                   whens: whe)
+      Portfolio.create!(project_name: name, description: dsc, whens: whe)
     end
 
 
