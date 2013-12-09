@@ -5,3 +5,9 @@ by upublicznić miejsce do sprawdzenia aktualnych informacji na mój temat,
 jak również jako przykładowa aplikacja w Ruby on Rails jako jeden z realizowanych projektów.
 
 Aplikacja w tym momencie jest na etapie wczesnego szkieletu. Jednakże w miarę czasu wonego bedzie rozwijana.
+
+Powstaje z użyciem:
+  rcpec + guard + spork -> narzędzia do testowania oraz automatyzacji testów
+  bootstrap -> CSS
+  postgresql
+  
