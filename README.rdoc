@@ -4,6 +4,8 @@ Aplikacja ta powstała jako aplikacja z moim cv, między innymi po to,
 by upublicznić miejsce do sprawdzenia aktualnych informacji na mój temat, 
 jak również jako przykładowa aplikacja w Ruby on Rails jako jeden z realizowanych projektów.
 
+Tworzona silnie wzorując się na wiedzy z http://ruby.railstutorial.org/ruby-on-rails-tutorial-book
+
 Aplikacja w tym momencie jest na etapie wczesnego szkieletu. Jednakże w miarę czasu wonego bedzie rozwijana.
 
 Powstaje z użyciem:
