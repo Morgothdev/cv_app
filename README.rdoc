@@ -9,7 +9,7 @@ Tworzona silnie wzorując się na wiedzy z http://ruby.railstutorial.org/ruby-on
 Aplikacja w tym momencie jest na etapie wczesnego szkieletu. Jednakże w miarę czasu wonego bedzie rozwijana.
 
 Powstaje z użyciem:
-  rcpec + guard + spork -> narzędzia do testowania oraz automatyzacji testów
+  capybara + rscpec + guard + spork +(faker, factory_girl) -> narzędzia do testowania oraz automatyzacji testów
   bootstrap -> CSS
   postgresql
   
