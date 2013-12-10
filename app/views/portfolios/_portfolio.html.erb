@@ -1,6 +1,6 @@
 <% if @portfolios.any? %>
   <%= will_paginate %>
-  <ol class="projects">
+  <ol class="span9">
     <%= render partial: 'portfolios/portfolio_item', collection: @portfolios, as: :portfolio %>
   </ol>
   <%= will_paginate %>

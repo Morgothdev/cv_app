@@ -1,8 +1,8 @@
-<div id="<%= portfolio.id %>" class="row show-grid">
-    <span class="user">Project name: 
-        <%= portfolio.project_name %>
-    </span>
-    <span class="timewhen">When: <%= portfolio.whens %></span>
-    <span class="content">Description: <%= portfolio.description %></span>
+<section id="<%= portfolio.id %>">
+    <div class-"page-header">
+        <h3><%= portfolio.project_name %></h3>
+    </div>
+    <h4><%= portfolio.whens %></h4>
+    <h4><%= portfolio.description %></h4>
     <%= render partial: 'portfolios/functions', locals: { functions: portfolio.functions} %>
-</div>
+</section>
