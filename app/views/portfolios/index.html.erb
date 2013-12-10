@@ -2,6 +2,9 @@
 <% provide(:active_for_header,"portfolio") %>
 
 <h3>My projects</h3>
+<% if signed_in? %>
+    <%= button_to "Add new project", action: "new" %>
+<% end %>
 <div  class="bs-docs-grid">
     <%= render 'portfolios/portfolio' %>
 </div
