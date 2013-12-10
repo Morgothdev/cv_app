@@ -1,8 +1,8 @@
-<li id="<%= portfolio.id %>">
+<div id="<%= portfolio.id %>" class="row show-grid">
     <span class="user">Project name: 
         <%= portfolio.project_name %>
     </span>
     <span class="timewhen">When: <%= portfolio.whens %></span>
     <span class="content">Description: <%= portfolio.description %></span>
     <%= render partial: 'portfolios/functions', locals: { functions: portfolio.functions} %>
-</li>
+</div>
