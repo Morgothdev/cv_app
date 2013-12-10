@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= full_title(yield(:title)) %></title> 
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+    <title><%= full_title(yield(:title)) %></title> 
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
 
-	<%= render 'layouts/header' %>
-    <% flash.each do |key, value| %>
+
+  <div class="container">
+
+    <div class="row">
+        <%= render 'layouts/header' %>
+    </div>
+    <div class="row">
+      <% flash.each do |key, value| %>
         <%= content_tag(:div, value, class: "alert alert-#{key}") %>
-    <% end %>
-	<div>
-		<%= yield %>
-	</div>
+      <% end %>
+    </div>
+    <div class="row">
+      <%= yield %>
+    </div>
 
-	<%= render 'layouts/footer' %>
-	<%= render 'layouts/root' %>
-</div>
+    <div class="row">
+    <%= render 'layouts/footer' %>
+    </div>
+    <div class="row">
+    <%= render 'layouts/root' %>
+    </div>
+  </div>
+
 </body>
 </html>
