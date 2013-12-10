@@ -1,5 +1,12 @@
 <div class="rootVisible">
 <nav>
-<%= link_to "AdminLog", adminlog_path %>
+    <% if signed_in? %>
+        <ul>
+            <li><%= link_to "Admin sign out", adminout_path, method: "delete" %></li>
+            <li><%= link_to "Settings", edit_admin_path(current_admin) %></li>
+        </ul>
+    <% else %>
+        <%= link_to "Admin sign in", adminlog_path %>
+    <% end %>
 </nav>
 </div>

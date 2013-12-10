@@ -9,7 +9,5 @@ describe "HomePages" do
 		
 		it { should have_title "Mateusz Jaje | Start" }
 		it { should have_content "Witam serdecznie" }
-
-		
 	end
 end

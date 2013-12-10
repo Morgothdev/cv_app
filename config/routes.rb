@@ -1,16 +1,19 @@
 CvApp::Application.routes.draw do
 
-  resources :portfolios, :experiences, :educations
-  
+    resources :portfolios, :experiences, :educations
+    resources :admins, only: [:update, :edit, :destroy]
+    resources :sessions, only: [:new, :create, :destroy]
 
-  root "home_page#index"
 
-  match '/about', to: 'about#index', via: 'get'
-  match '/portfolio', to: 'portfolios#index', via: 'get'
-  match '/education', to: 'educations#index', via: 'get'
-  match '/experience', to: 'experiences#index', via: 'get'
-  match '/contact', to: 'contact#index', via: 'get'
-  match '/adminlog', to: 'sessions#index', via: 'get'
+    root "home_page#index"
+
+    match '/about', to: 'about#index', via: 'get'
+    match '/portfolio', to: 'portfolios#index', via: 'get'
+    match '/education', to: 'educations#index', via: 'get'
+    match '/experience', to: 'experiences#index', via: 'get'
+    match '/contact', to: 'contact#index', via: 'get'
+    match '/adminlog', to: 'sessions#new', via: 'get'
+    match '/adminout', to: 'sessions#destroy', via: 'delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
