@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="span10 offset2">
+    <%= form_for @portfolio do |f| %>
+
+        <%= f.label :project_name %>
+        <%= f.text_field :project_name, value: @portfolio.project_name, class: "span7"  %>
+
+        <%= f.label :when %>
+        <%= f.text_field :whens, value: @portfolio.whens, class: "span7" %>
+
+        <%= f.label :description %>
+        <%= f.text_area :description, value: @portfolio.description, class: "span7" %>
+
+        <br>
+        <%= f.submit "Update", class: "btn btn-primary btn-lg" %>
+    <% end %>
+  </div>
+</div>

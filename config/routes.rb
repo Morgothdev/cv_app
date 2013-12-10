@@ -1,6 +1,11 @@
 CvApp::Application.routes.draw do
 
-    resources :portfolios, :experiences, :educations
+    resources :portfolios do
+        resources :functions, only: [:index, :new, :create, :edit, :update, :destroy]
+    end
+
+    resources :experiences, :educations
+
     resources :admins, only: [:update, :edit, :destroy]
     resources :sessions, only: [:new, :create, :destroy]
 

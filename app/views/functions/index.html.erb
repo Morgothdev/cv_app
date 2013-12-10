@@ -1,0 +1,5 @@
+<% if @portfolio.functions.any? %>
+    <ul>
+        <%= render partial: 'functions/function_item', collection: @portfolio.functions, as: :function %>
+    </ul>
+<% end %>
